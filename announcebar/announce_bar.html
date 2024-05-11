@@ -82,7 +82,6 @@
                 display: flex;
                 align-items: center;
                 gap: 6px;
-                cursor: pointer;
             }
             .language_text,
             .currency_text{
@@ -105,18 +104,23 @@
                 object-fit: contain;
             }
 
-            .language_option_dropdown {
+            .currency_options_dropdown,
+            .language_options_dropdown{
                 position: absolute;
                 top: 100%;
                 left: 0%;
-                transform: translate(0px,14px);
+                transform: translate(0px,35px);
                 padding: 15px;
                 background-color: #fff;
                 box-shadow: 0 0 20px rgb(0 0 0 / 20%);
                 min-width: 100px;
                 max-width: 300px;
+                transition: all 0.3s linear;
+                opacity: 0;
+                visibility: hidden;
             }
-            .language_options_lists {
+            .currency_options_lists,
+            .language_options_lists{
                 list-style: none;
                 display: flex;
                 flex-direction: column;
@@ -124,13 +128,31 @@
                 gap: 2px;
                 cursor: pointer;
             }
+            .currency_option_item,
             .language_option_item{
                 font-size: 12px;
                 color: #868686;
                 font-weight: 400;
             }
 
+            /* active currency button dropdown */
+            .currency_btn .open_currency_switch_dropdown{
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0px,12px);
+            }
+            .language_btn .open_language_switch_dropdown{
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0px,17px);
+            }
 
+            @media screen and (min-width:768px){
+                .language_btn,
+                .currency_btn{
+                    cursor: pointer;
+                }
+            }
         </style>
     </head>
     <body>
@@ -169,7 +191,7 @@
                                                 stroke-width="0.2" />
                                         </svg>
                                     </span>
-                                    <!-- <div class="language_option_dropdown">
+                                    <div class="language_options_dropdown">
                                         <ul class="language_options_lists">
                                             <li
                                                 class="language_option_item">English</li>
@@ -178,7 +200,7 @@
                                             <li
                                                 class="language_option_item">বাংলা</li>
                                         </ul>
-                                    </div> -->
+                                    </div>
                                 </div>
                                 <div class="currency_btn">
                                     <span class="currency_flag_img_container">
@@ -198,14 +220,14 @@
                                                 stroke-width="0.2" />
                                         </svg>
                                     </span>
-                                    <div class="language_option_dropdown">
-                                        <ul class="language_options_lists">
+                                    <div class="currency_options_dropdown">
+                                        <ul class="currency_options_lists">
                                             <li
-                                                class="language_option_item">English</li>
+                                                class="currency_option_item">USD</li>
                                             <li
-                                                class="language_option_item">Spain</li>
+                                                class="currency_option_item">AED</li>
                                             <li
-                                                class="language_option_item">বাংলা</li>
+                                                class="currency_option_item">EUR</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -287,5 +309,15 @@
 
             </div>
         </section>
+        <script>
+            const currency_options_dropdown = document.querySelector('.currency_options_dropdown ');
+            const language_options_dropdown = document.querySelector('.language_options_dropdown ');
+            document.querySelector('.currency_btn').addEventListener('click' , function(){
+                currency_options_dropdown.classList.toggle('open_currency_switch_dropdown');
+            });
+            document.querySelector('.language_btn').addEventListener('click' , function(){
+                language_options_dropdown.classList.toggle('open_language_switch_dropdown');
+            });
+        </script>
     </body>
 </html>
