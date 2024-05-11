@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Announce-bar</title>
+        <link rel="stylesheet" href="../golbal_assets/css/global.css">
+        <style>
+            .announce_bar_content_wrapper{
+                background: #FFF;
+                box-shadow: 0px 1px 0px 0px #EBEBEB;
+            }
+            .announce_bar_inner_content_wrapper{
+                padding: 11px 0px;
+            }
+            .announce_bar_inner_content_wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+            .right_side_content {
+                display: flex; 
+                gap: 16px;
+            }
+            .menu_lists_items{
+                display: flex;
+                align-items: center;
+                list-style: none;
+                gap: 21px;
+
+            }
+            .menu_list_item{
+                position: relative;
+                color: #868686;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 22px;
+                cursor: pointer;
+            }
+            .list_divider {
+                width: 1.5px;
+                height: 20px;
+                background-color: #868686;
+                position: absolute;
+                right: -10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .social_lists_items{
+                display: flex;
+                list-style: none;
+                gap: 14px;
+                flex-wrap: wrap;
+            }
+            .social_list_item{
+                display: flex;
+                width: 20px;
+                height: 20px;
+                justify-content: center;
+                align-items: center;
+            }
+            svg{
+                display: flex;
+            }
+            .social_media_icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .currency_language_content {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 8px;
+            }
+            .language_btn,
+            .currency_btn{
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                cursor: pointer;
+            }
+            .language_text,
+            .currency_text{
+                color: #868686;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 22px;
+            }
+            .currency_flag_img_container{
+                height: 30px;
+                width: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            img.currency_flag_img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .language_option_dropdown {
+                position: absolute;
+                top: 100%;
+                left: 0%;
+                transform: translate(0px,17px);
+                padding: 15px;
+                background-color: #fff;
+                box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+                min-width: 100px;
+                max-width: 300px;
+            }
+            .language_options_lists {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2px;
+                cursor: pointer;
+            }
+            .language_option_item{
+                font-size: 12px;
+                color: #868686;
+                font-weight: 400;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <section class="announce_bar">
+            <div class="announce_bar_content_wrapper">
+
+                <div class="container">
+                    <div class="announce_bar_inner_content_wrapper">
+                        <div class="left_side_content">
+                            <nav class="nav_menu_wrapper">
+                                <ul class="menu_lists_items">
+                                    <li class="menu_list_item">Store
+                                        Location
+                                        <span class="list_divider"></span>
+                                    </li>
+                                    <li class="menu_list_item">About
+                                        <span class="list_divider"></span>
+                                    </li>
+
+                                    <li class="menu_list_item">Contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="right_side_content">
+                            <div class="currency_language_content">
+                                <div class="language_btn">
+                                    <span class="language_text">English</span>
+                                    <span
+                                        class="language_arrow_icon"><svg
+                                            width="9" height="6"
+                                            viewBox="0 0 9 6" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.73056 3.97717L7.83225 0.875486C7.93739 0.770344 8.06005 0.720694 8.20024 0.726535C8.34043 0.732377 8.4631 0.787868 8.56824 0.89301C8.67338 0.998152 8.72595 1.12374 8.72595 1.26977C8.72595 1.4158 8.67338 1.54138 8.56824 1.64653L5.09856 5.11621C5.04015 5.17462 4.98174 5.21551 4.92332 5.23887C4.86491 5.26224 4.80066 5.27392 4.73056 5.27392C4.66047 5.27392 4.59622 5.26224 4.5378 5.23887C4.47939 5.21551 4.42098 5.17462 4.36257 5.11621L0.875364 1.629C0.770223 1.52386 0.720572 1.4012 0.726414 1.26101C0.732255 1.12082 0.787746 0.998152 0.892888 0.89301C0.99803 0.787868 1.12362 0.735297 1.26965 0.735297C1.41568 0.735297 1.54126 0.787868 1.6464 0.89301L4.73056 3.97717Z"
+                                                fill="#868686" stroke="#868686"
+                                                stroke-width="0.2" />
+                                        </svg>
+                                    </span>
+                                    <div class="language_option_dropdown">
+                                        <ul class="language_options_lists">
+                                            <li
+                                                class="language_option_item">English</li>
+                                            <li
+                                                class="language_option_item">Spain</li>
+                                            <li
+                                                class="language_option_item">বাংলা</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="currency_btn">
+                                    <span class="currency_flag_img_container">
+                                        <img class="currency_flag_img"
+                                            src="../golbal_assets/icon/flag.png.png"
+                                            alt>
+                                    </span>
+                                    <span class="currency_text">USD</span>
+                                    <span
+                                        class="currency_arrow_icon"><svg
+                                            width="9" height="6"
+                                            viewBox="0 0 9 6" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.73056 3.97717L7.83225 0.875486C7.93739 0.770344 8.06005 0.720694 8.20024 0.726535C8.34043 0.732377 8.4631 0.787868 8.56824 0.89301C8.67338 0.998152 8.72595 1.12374 8.72595 1.26977C8.72595 1.4158 8.67338 1.54138 8.56824 1.64653L5.09856 5.11621C5.04015 5.17462 4.98174 5.21551 4.92332 5.23887C4.86491 5.26224 4.80066 5.27392 4.73056 5.27392C4.66047 5.27392 4.59622 5.26224 4.5378 5.23887C4.47939 5.21551 4.42098 5.17462 4.36257 5.11621L0.875364 1.629C0.770223 1.52386 0.720572 1.4012 0.726414 1.26101C0.732255 1.12082 0.787746 0.998152 0.892888 0.89301C0.99803 0.787868 1.12362 0.735297 1.26965 0.735297C1.41568 0.735297 1.54126 0.787868 1.6464 0.89301L4.73056 3.97717Z"
+                                                fill="#868686" stroke="#868686"
+                                                stroke-width="0.2" />
+                                        </svg>
+                                    </span>
+                                    <div class="language_option_dropdown">
+                                        <ul class="language_options_lists">
+                                            <li
+                                                class="language_option_item">English</li>
+                                            <li
+                                                class="language_option_item">Spain</li>
+                                            <li
+                                                class="language_option_item">বাংলা</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span class="list_divider"></span>
+                            </div>
+                            <div class="social_media_icon">
+                                <ul class="social_lists_items">
+                                    <li class="social_list_item">
+                                        <span
+                                            class="social_media_icon"><svg
+                                                width="14" height="12"
+                                                viewBox="0 0 14 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.7374 0.124268H12.7319L8.37577 5.10164L13.4999 11.8757H9.4889L6.34506 7.76827L2.75165 11.8757H0.753981L5.41231 6.5506L0.499939 0.124268H4.61281L7.45169 3.87856L10.7374 0.124268ZM10.0371 10.6835H11.1415L4.01102 1.25418H2.82477L10.0371 10.6835Z"
+                                                    fill="#868686" />
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li class="social_list_item">
+                                        <span
+                                            class="social_media_icon"><svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="12" height="14"
+                                                viewBox="0 0 12 14" fill="none">
+                                                <path
+                                                    d="M11.6679 5.84433C10.5093 5.84433 9.43516 5.47383 8.55874 4.84441V9.38629C8.55874 11.6548 6.71328 13.4997 4.44533 13.4997C3.56891 13.4997 2.75587 13.2235 2.08799 12.7544C1.02741 12.0096 0.331909 10.7778 0.331909 9.38629C0.331909 7.11779 2.17737 5.27233 4.44587 5.27233C4.63437 5.27233 4.81853 5.28804 4.99999 5.31241V5.84162V7.59391C4.82449 7.5392 4.63924 7.50724 4.44587 7.50724C3.4102 7.50724 2.56737 8.35008 2.56737 9.38629C2.56737 10.1078 2.97687 10.7345 3.57487 11.0492C3.83541 11.1862 4.1317 11.2648 4.44641 11.2648C5.45824 11.2648 6.28374 10.4599 6.32166 9.4567L6.32328 0.500244H8.5582C8.5582 0.694161 8.57716 0.883203 8.61074 1.06737C8.76837 1.91887 9.27374 2.64958 9.97412 3.1062C10.4616 3.42416 11.0434 3.60995 11.6674 3.60995L11.6679 5.84433Z"
+                                                    fill="#868686" />
+                                            </svg></span>
+                                    </li>
+                                    <li class="social_list_item">
+                                        <span
+                                            class="social_media_icon"><svg
+                                                width="8" height="14"
+                                                viewBox="0 0 8 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M5.50875 13.5C3.55334 13.5 2.0968 12.4941 2.0968 10.088V6.23408H0.320129V4.14704C2.275 3.6395 3.09292 1.95708 3.18717 0.5H5.21734V3.8085H7.58605V6.23354H5.21734V9.58917C5.21734 10.595 5.72488 10.9428 6.53305 10.9428H7.67975V13.5H5.50875Z"
+                                                    fill="#868686" />
+                                            </svg>
+                                        </span>
+                                    </li>
+                                    <li class="social_list_item">
+                                        <span
+                                            class="social_media_icon">
+                                            <svg width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.99994 1.67108C8.73544 1.67108 8.94127 1.67758 9.62648 1.709C10.335 1.7415 11.0646 1.90292 11.5808 2.41913C12.1019 2.94021 12.2584 3.66279 12.2909 4.37346C12.3224 5.05867 12.3289 5.2645 12.3289 7C12.3289 8.7355 12.3224 8.94133 12.2909 9.62654C12.259 10.3313 12.0938 11.0679 11.5808 11.5809C11.0597 12.102 10.3377 12.2585 9.62648 12.291C8.94127 12.3224 8.73544 12.3289 6.99994 12.3289C5.26444 12.3289 5.05861 12.3224 4.3734 12.291C3.67411 12.259 2.92769 12.09 2.41906 11.5809C1.90069 11.0625 1.74144 10.3329 1.70894 9.62654C1.67752 8.94133 1.67102 8.7355 1.67102 7C1.67102 5.2645 1.67752 5.05867 1.70894 4.37346C1.7409 3.67146 1.90773 2.93046 2.41906 2.41913C2.93906 1.89913 3.66436 1.7415 4.3734 1.709C5.05861 1.67758 5.26444 1.67108 6.99994 1.67108ZM6.99994 0.5C5.23465 0.5 5.01311 0.507583 4.31977 0.539C3.31498 0.585042 2.31723 0.864542 1.59086 1.59092C0.861772 2.32 0.584981 3.31558 0.538939 4.31983C0.507522 5.01317 0.499939 5.23471 0.499939 7C0.499939 8.76529 0.507522 8.98683 0.538939 9.68017C0.584981 10.6839 0.865564 11.6843 1.59086 12.4091C2.3194 13.1376 3.31661 13.415 4.31977 13.461C5.01311 13.4924 5.23465 13.5 6.99994 13.5C8.76523 13.5 8.98677 13.4924 9.68011 13.461C10.6844 13.415 11.6832 13.1349 12.409 12.4091C13.1386 11.6795 13.4149 10.6844 13.4609 9.68017C13.4924 8.98683 13.4999 8.76529 13.4999 7C13.4999 5.23471 13.4924 5.01317 13.4609 4.31983C13.4149 3.31504 13.1349 2.31675 12.409 1.59092C11.6816 0.863458 10.6816 0.5845 9.68011 0.539C8.98677 0.507583 8.76523 0.5 6.99994 0.5Z"
+                                                    fill="#868686" />
+                                                <path
+                                                    d="M6.99992 3.66223C5.15663 3.66223 3.66217 5.15669 3.66217 6.99998C3.66217 8.84327 5.15663 10.3377 6.99992 10.3377C8.84321 10.3377 10.3377 8.84327 10.3377 6.99998C10.3377 5.15669 8.84321 3.66223 6.99992 3.66223ZM6.99992 9.16665C5.80338 9.16665 4.83325 8.19652 4.83325 6.99998C4.83325 5.80344 5.80338 4.83332 6.99992 4.83332C8.19646 4.83332 9.16659 5.80344 9.16659 6.99998C9.16659 8.19652 8.19646 9.16665 6.99992 9.16665Z"
+                                                    fill="#868686" />
+                                                <path
+                                                    d="M10.4699 4.31006C10.9007 4.31006 11.2499 3.96084 11.2499 3.53006C11.2499 3.09928 10.9007 2.75006 10.4699 2.75006C10.0391 2.75006 9.68988 3.09928 9.68988 3.53006C9.68988 3.96084 10.0391 4.31006 10.4699 4.31006Z"
+                                                    fill="#868686" />
+                                            </svg>
+
+                                        </span>
+                                    </li>
+                                    <li class="social_list_item">
+                                        <span
+                                            class="social_media_icon"><svg
+                                                width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.4999 7.03925C13.4999 10.2833 11.1199 12.9727 8.01286 13.4607V8.93075H9.52356L9.81119 7.05658H8.01286V5.84054C8.01286 5.32758 8.26419 4.82816 9.06911 4.82816H9.88648V3.23241C9.88648 3.23241 9.1444 3.10566 8.43536 3.10566C6.95444 3.10566 5.98702 4.0032 5.98702 5.62766V7.05604H4.3409V8.9302H5.98702V13.4602C2.88056 12.9716 0.499939 10.2827 0.499939 7.03925C0.499939 3.44962 3.41031 0.539246 6.99994 0.539246C10.5896 0.539246 13.4999 3.44908 13.4999 7.03925Z"
+                                                    fill="#868686" />
+                                            </svg>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </body>
+</html>
