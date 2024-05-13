@@ -208,8 +208,73 @@
                 <div class="sidebar_inner_content">
                     <div class="menu_header_option">
                         <ul class="menu_header_items">
-                            <li class="menu_header_item">Menu</li>
+                            <li
+                                class="menu_header_item active_menu_header">Menu</li>
                             <li class="menu_header_item">Categories</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar_main_menu_list_wrapper">
+                        <ul class="sidebar_main_menu_lists">
+                            <li class="sidebar_menu_single_item">
+                                <span class="menu_title">Home</span>
+                                <span class="menu_expandable_icon">
+                                    <svg width="10" height="10"
+                                        viewBox="0 0 10 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.15152 10V0H5.84848V10H4.15152ZM0 5.84848V4.15152H10V5.84848H0Z"
+                                            fill="#121212" />
+                                    </svg>
+
+                                </span>
+                            </li>
+                            <li class="sidebar_menu_single_item">
+                                <span class="menu_title">Shop</span>
+                                <span class="menu_expandable_icon">
+                                    <svg width="10" height="10"
+                                        viewBox="0 0 10 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.15152 10V0H5.84848V10H4.15152ZM0 5.84848V4.15152H10V5.84848H0Z"
+                                            fill="#121212" />
+                                    </svg>
+
+                                </span>
+                                <div class="sub_menu_items_wrapper">
+                                    <ul class="sub_menu_items">
+                                        <li class="sub_menu_item">
+                                            <span
+                                                class="sub_menu_item_title">Fashion-1</span>
+                                            <span class="menu_expandable_icon">
+                                                <svg width="10" height="10"
+                                                    viewBox="0 0 10 10"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M4.15152 10V0H5.84848V10H4.15152ZM0 5.84848V4.15152H10V5.84848H0Z"
+                                                        fill="#121212" />
+                                                </svg>
+
+                                            </span>
+                                        </li>
+                                        <li class="sub_menu_item">
+                                            <span
+                                                class="sub_menu_item_title">Fashion-1</span>
+                                            <span class="menu_expandable_icon">
+                                                <svg width="10" height="10"
+                                                    viewBox="0 0 10 10"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M4.15152 10V0H5.84848V10H4.15152ZM0 5.84848V4.15152H10V5.84848H0Z"
+                                                        fill="#121212" />
+                                                </svg>
+
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -225,6 +290,23 @@
                 document.querySelector('.overlay').classList.remove('active_overlay');
                 document.querySelector('.mobile_sidebar_menu_wrapper').classList.remove('open_mobile_menu_sidebar');
             });
+
+            /* @__ mobile manu header menu active__@ */
+            const menu_heading_option = document.querySelectorAll('.menu_header_items li');
+            menu_heading_option.forEach((heading_option)=>{
+                heading_option.addEventListener('click' , ()=>{
+                    removeClass(menu_heading_option,'active_menu_header');
+                    heading_option.classList.add('active_menu_header');
+                });
+            });
+
+            /* @___ class remove from element___@ */
+            function removeClass(elements,className){
+                elements.forEach((elem)=>{
+                    elem.classList.contains(className) && elem.classList.remove(className);
+                });
+            };
+
         </script>
     </body>
 </html>
